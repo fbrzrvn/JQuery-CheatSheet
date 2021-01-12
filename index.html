@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- MATERIAL ICONS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/index.css">
+  <!-- JS -->
+  <script defer src="assets/index.js"></script>
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script defer src="assets/jQuery.js"></script>
+  <title>JQuery Cheat Sheet</title>
+</head>
+<body>
+
+  <h1 class="headline">jQuery Cheat Sheet</h1>
+  <!-- EVENTS -->
+  <h2>Events</h2>
+  <ul class="list">
+    <li>
+      <a href="#0">When the HTML document has been loaded and you can manipulate it with JavaScript</a>
+      <span class="material-icons">south</span>
+      <div id="1" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <pre>document.addEventListener('DOMContentLoaded', () => {});</pre>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <pre>$(function() {});</pre>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#1">When an HTML item has been clicked</a>
+      <span class="material-icons">south</span>
+        <div id="2" class="wrapper hide">
+          <div class="js">
+            <h3>JavaScript</h3>
+            <button id="click-js">Click Me</button>
+            <p id="2-js"></p>
+          </div>
+          <div class="jquery">
+            <h3>jQuery</h3>
+            <button id="click-jQuery">Click Me</button>
+            <p id="2-jQuery"></p>
+          </div>
+        </div>
+    </li>
+    <li>
+      <a href="#2">When an HTML item has been double clicked</a>
+      <span class="material-icons">south</span>
+      <div id="3" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="dblclick-js">Click Me</button>
+          <p id="3-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="dblclick-jQuery">Click Me</button>
+          <p id="3-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#3">When the user presses a key on the keyboard</a>
+      <span class="material-icons">south</span>
+      <div id="4" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <p>Pressed Key: <span id="4-js"></span></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <p>Pressed Key: <span id="4-jQuery"></span></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#4">When the user moves the mouse cursor</a>
+      <span class="material-icons">south</span>
+      <div id="5" class="wrapper hide">
+        <div id="box-js" class="js">
+          <h3>JavaScript</h3>
+          <p id="5-js"></p>
+        </div>
+        <div id="box-jQuery" class="jquery">
+          <h3>jQuery</h3>
+          <p id="5-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#5">When the user changes a value of an text input</a>
+      <span class="material-icons">south</span>
+      <div id="6" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <form action="">
+            <input type="text" placeholder="Enter a text..." data-input-js>
+            <button id="input-js">Click</button>
+          </form>
+          <p id="6-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <form action="">
+            <input type="text" placeholder="Enter a text..." data-input-jQuery>
+            <button id="input-jQuery">Click</button>
+          </form>
+          <p id="6-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#6">When an image is loaded</a>
+      <span class="material-icons">south</span>
+      <div id="7" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <img id="true-img-js" src="assets/black_lives_matter.svg" alt="black-lives-matter" width="100px">
+          <p id="7-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <img id="true-img-jQuery" src="assets/black_lives_matter.svg" alt="black-lives-matter" width="100px">
+          <p id="7-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#7">When an image fails to load, (if you write an incorrect image url the loading of the image will fail)</a>
+      <span class="material-icons">south</span>
+      <div id="8" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <img id="false-img-js" src="asset/black_lives_matter.svg" alt="black-lives-matter" width="100px">
+          <p id="8-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <img id="false-img-jQuery" src="asset/black_lives_matter.svg" alt="black-lives-matter" width="100px">
+          <p id="8-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#8">When a form is submitted</a>
+      <span class="material-icons">south</span>
+      <div id="9" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <form action="" data-form-js>
+            <input type="text">
+            <input type="submit">
+          </form>
+          <p id="9-js"></p>
+        </div>
+        <div id="9-jQuery" class="jquery">
+          <h3>jQuery</h3>
+          <form action="" data-form-JQuery>
+            <input type="text">
+            <input type="submit">
+          </form>
+          <p id="9-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#9">When the user changes the option of a select element</a>
+      <span class="material-icons">south</span>
+      <div id="10" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <select id="mySelect-js">
+            <option value="0">Choose a option</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Windows">Windows</option>
+          </select>
+          <p id="10-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <select id="mySelect-jQuery">
+            <option value="0">Choose a option</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Windows">Windows</option>
+          </select>
+          <p id="10-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#10">When you position the mouse over an element</a>
+      <span class="material-icons">south</span>
+      <div id="11" class="wrapper hide">
+        <div class="js">
+          <h3 id="hover-js">JavaScript</h3>
+          <p id="11-js"></p>
+        </div>
+        <div class="jquery">
+          <h3 id="hover-jQuery">jQuery</h3>
+          <p id="11-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#11">When a checkbox is checked or unchecked</a>
+      <span class="material-icons">south</span>
+      <div id="12" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <label for="checkbox-js">Accept</label>
+          <input type="checkbox" id="checkbox-js">
+          <p id="12-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <label for="checkbox-jQuery">Accept</label>
+          <input type="checkbox" id="checkbox-jQuery">
+          <p id="12-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#12">When a ul list item is clicked, show the item that was clicked</a>
+      <span class="material-icons">south</span>
+      <div id="13" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <ul data-list-js>
+            <li>Water</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+          </ul>
+          <p id="13-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <ul data-list-jQuery>
+            <li>Water</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+          </ul>
+          <p id="13-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <!-- FUNCTION & SELECTOR -->
+    <h2>Function & Selector</h2>
+    <li>
+      <a href="#13">Create an HTML element with any text value</a>
+      <span class="material-icons">south</span>
+      <div id="14" class="wrapper hide">
+        <div id="parent-js" class="js">
+          <h3>JavaScript</h3>
+          <button id="14-js">Click Me</button>
+        </div>
+        <div id="parent-jQuery" class="jquery">
+          <h3>jQuery</h3>
+          <button id="14-jQuery">Click Me</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#14">Remove an HTML element with any text value</a>
+      <span class="material-icons">south</span>
+      <div id="15" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="15-js">Click Me</button>
+          <p id="remove-js">Element to Remove</p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="15-jQuery">Click Me</button>
+          <p id="remove-jQuery">Element to Remove</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#15">Append an HTML element with any text value to a parent element</a>
+      <span class="material-icons">south</span>
+      <div id="16" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="16-js">Click Me</button>
+          <ul data-appendParent-js></ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="16-jQuery">Click Me</button>
+          <ul data-appendParent-jQuery></ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#16">Prepend an HTML element with any text value to a parent element</a>
+      <span class="material-icons">south</span>
+      <div id="17" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="17-js">Click Me</button>
+          <ul data-prependChild-js>
+            <li>Coffee</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="17-jQuery">Click Me</button>
+          <ul data-prependChild-jQuery>
+            <li>Coffee</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#17">Create and add an HTML element with any text value after another element</a>
+      <span class="material-icons">south</span>
+      <div id="18" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="18-js">Click Me</button>
+          <ul data-appendChild-js>
+            <li>Coffee</li>
+            <li>Water</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="18-jQuery">Click Me</button>
+          <ul data-appendChild-jQuery>
+            <li>Coffee</li>
+            <li>Water</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#18">Create and add an HTML element with any text value before another element</a>
+      <span class="material-icons">south</span>
+      <div id="19" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="19-js">Click Me</button>
+          <ul data-appendBefore-js>
+            <li>Coffee</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="19-jQuery">Click Me</button>
+          <ul data-appendBefore-jQuery>
+            <li>Coffee</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#19">Clone an HTML element within other element</a>
+      <span class="material-icons">south</span>
+      <div id="20" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="20-js">Click Me</button>
+          <div id="append-clone-js" class="flex-center">
+            <div id="clone" class="clone"></div>
+          </div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="20-jQuery">Click Me</button>
+          <div id="append-clone-jQuery" class="flex-center">
+            <div id="clone" class="clone"></div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#20">Add a class to an HTML item</a>
+      <span class="material-icons">south</span>
+      <div id="21" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="21-js">Click Me</button>
+          <h2 id="header-21-js">Add Active Class Js</h2>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="21-jQuery">Click Me</button>
+          <h2 id="header-21-jQuery">Add Active Class jQuery</h2>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#21">Remove a class to an HTML item</a>
+      <span class="material-icons">south</span>
+      <div id="22" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="22-js">Click Me</button>
+          <h2 id="header-22-js" class="active">Remove Active Class</h2>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="22-jQuery">Click Me</button>
+          <h2 id="header-22-jQuery" class="active">Remove Active Class</h2>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#22">Toggle a class of an HTML item</a>
+      <span class="material-icons">south</span>
+      <div id="23" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="23-js">Click Me</button>
+          <h2 id="header-23-js">Toggle Active Class</h2>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="23-jQuery">Click Me</button>
+          <h2 id="header-23-jQuery">Toggle Active Class</h2>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#23">Add a disabled attribute to an HTML button</a>
+      <span class="material-icons">south</span>
+      <div id="24" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="24-js">Click Me</button>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="24-jQuery">Click Me</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#24">Remove the disabled attribute of an HTML button</a>
+      <span class="material-icons">south</span>
+      <div id="25" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="25-js">Click Me</button>
+          <button id="btn-disabled-js" disabled>Disabled</button>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="25-jQuery">Click Me</button>
+          <button id="btn-disabled-jQuery" disabled>Disabled</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#25">Set a data-src attribute to a img element</a>
+      <span class="material-icons">south</span>
+      <div id="26" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="26-js">Click Me</button>
+          <img alt="black-lives-matter" width="100px" data-add-src-js>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="26-jQuery">Click Me</button>
+          <img alt="black-lives-matter" width="100px" data-add-src-jQuery>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#26">Remove the data-src attribute of the img element</a>
+      <span class="material-icons">south</span>
+      <div id="27" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="27-js">Click Me</button>
+          <img src="assets/black_lives_matter.svg" alt="black-lives-matter" width="100px" data-remove-src-js>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="27-jQuery">Click Me</button>
+          <img src="assets/black_lives_matter.svg" alt="black-lives-matter" width="100px" data-remove-src-jQuery>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#27">Hide an HTML element on click display: none</a>
+      <span class="material-icons">south</span>
+      <div id="28" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="28-js">Click Me</button>
+          <div id="hide-js" class="clone"></div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="28-jQuery">Click Me</button>
+          <div id="hide-jQuery" class="clone"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#28">Show an HTML element on click display: block</a>
+      <span class="material-icons">south</span>
+      <div id="29" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="29-js">Click Me</button>
+          <div id="show-js" class="clone hide"></div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="29-jQuery">Click Me</button>
+          <div id="show-jQuery" class="clone hide"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#29">Fade in an HTML element using jQuery</a>
+      <span class="material-icons">south</span>
+      <div id="30" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="30-js">Click Me</button>
+          <div id="fadeIn-js" class="clone"></div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="30-jQuery">Click Me</button>
+          <div id="fadeIn-jQuery" class="clone"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#30">Fade out an HTML element using jQuery</a>
+      <span class="material-icons">south</span>
+      <div id="31" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="31-js">Click Me</button>
+          <div id="fadeOut-js" class="clone hidden"></div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="31-jQuery">Click Me</button>
+          <div id="fadeOut-jQuery" class="clone hide"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#31">Iterate a collection of elements and apply a change of style on them</a>
+      <span class="material-icons">south</span>
+      <div id="32" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="32-js">Click Me</button>
+          <ul>
+            <li class="item-js">Coffee</li>
+            <li class="item-js">Water</li>
+            <li class="item-js">Milk</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="32-jQuery">Click Me</button>
+          <ul>
+            <li class="item-jQuery">Coffee</li>
+            <li class="item-jQuery">Water</li>
+            <li class="item-jQuery">Milk</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#32">Get the parent element of a certain element and change its font weight</a>
+      <span class="material-icons">south</span>
+      <div id="33" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="33-js">Click Me</button>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="33-jQuery">Click Me</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#33">Get the collection of children of a certain element and change its font weight</a>
+      <span class="material-icons">south</span>
+      <div id="34" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="34-js">Click Me</button>
+          <ul id="change-children-class-js">
+            <li>Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="34-jQuery">Click Me</button>
+          <ul id="change-children-class-jQuery">
+            <li>Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#34">Get all the elements that have a certain class and change their font weight</a>
+      <span class="material-icons">south</span>
+      <div id="35" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="35-js">Click Me</button>
+          <ul>
+            <li class="important-js">Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+            <li class="important-js">Orange</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="35-jQuery">Click Me</button>
+          <ul>
+            <li class="important-jQuery">Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+            <li class="important-jQuery">Orange</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#35">Get an item by id and change its font weight</a>
+      <span class="material-icons">south</span>
+      <div id="36" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="36-js">Click Me</button>
+          <p id="change-font-js">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="36-jQuery">Click Me</button>
+          <p id="change-font-jQuery">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#36">Get all the elements that have a certain class and the display property of none and change their font color</a>
+      <span class="material-icons">south</span>
+      <div id="37" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="37-js">Click Me</button>
+          <ul>
+            <li class="change-js">Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+            <li class="change-js">Orange</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="37-jQuery">Click Me</button>
+          <ul>
+            <li class="change-jQuery">Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+            <li class="change-jQuery">Orange</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#37">Get the options of a select element that are selected (attribute selected)</a>
+      <span class="material-icons">south</span>
+      <div id="38" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <select id="select-js">
+            <option value="0">Choose a option</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Windows">Windows</option>
+          </select>
+          <p id="38-js"></p>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <select id="select-jQuery">
+            <option value="0">Choose a option</option>
+            <option value="Mac">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Windows">Windows</option>
+          </select>
+          <p id="38-jQuery"></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#38">Change the href attribute of the first a element (You have to create several a elements)</a>
+      <span class="material-icons">south</span>
+      <div id="39" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="39-js">Click Me</button>
+          <a href="" class="link-js">One</a>
+          <a href="" class="link-js">Two</a>
+          <a href="" class="link-js">Three</a>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="39-jQuery">Click Me</button>
+          <a href="" class="link-jQuery">One</a>
+          <a href="" class="link-jQuery">Two</a>
+          <a href="" class="link-jQuery">Three</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#39">Show an alert with the value of the first input of the page (Create an input element to test this case)</a>
+      <span class="material-icons">south</span>
+      <div id="40" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <input type="text" data-alert-input-js>
+          <button id="40-js">Sumbmit</button>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <input type="text" data-alert-input-jQuery>
+          <button id="40-jQuery">Submit</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#40">Remove all items from a specific selector</a>
+      <span class="material-icons">south</span>
+      <div id="41" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="41-js">Click Me</button>
+          <ul data-remove-all-js>
+            <li>Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="41-jQuery">Click Me</button>
+          <ul data-remove-all-jQuery>
+            <li>Coffee</li>
+            <li>Water</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#41">Animate an item after 2 seconds from the initial page load</a>
+      <span class="material-icons">south</span>
+      <div id="42" class="wrapper hide">
+        <div class="js">
+          <h3>JavaScript</h3>
+          <button id="42-js">Click Me</button>
+          <div id="animate-js" class="animation"></div>
+        </div>
+        <div class="jquery">
+          <h3>jQuery</h3>
+          <button id="42-jQuery">Click Me</button>
+          <div id="animate-jQuery" class="animation"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</body>
+</html>
